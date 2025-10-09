@@ -13,8 +13,8 @@ const routes = new Router();
 
 const upload = multer(multerConfig);
 
-routes.post("/users", UserController.store);
-routes.post("/session", SessionController.store);
+routes.post("/users", UserController.store); //Cadastro
+routes.post("/sessions", SessionController.store); //Login
 
 routes.use(authMiddleware); //todas as rotas abaixo daqui precisa do middleware
 routes.post("/products", upload.single("file"), ProductController.store);
