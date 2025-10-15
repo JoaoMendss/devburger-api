@@ -14,8 +14,8 @@ const routes = new Router();
 
 const upload = multer(multerConfig);
 
-routes.post("/users", UserController.store); //Cadastro
-routes.post("/sessions", SessionController.store); //Login
+routes.post("/users", UserController.store);
+routes.post("/sessions", SessionController.store);
 
 routes.use(authMiddleware); //todas as rotas abaixo daqui precisa do middleware
 routes.post("/products", upload.single("file"), ProductController.store);
@@ -31,6 +31,8 @@ routes.get("/orders", OrderController.index);
 routes.put("/orders/:id", OrderController.update);
 
 routes.post("/create-payment-intent", CreatePaymentIntentController.store);
+
+
 
 export default routes;
 

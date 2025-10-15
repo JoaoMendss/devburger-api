@@ -74,7 +74,7 @@ DEVBURGER-API
 ├── package.json
 ├── README.md
 └── yarn.lock
-```
+````
 </details>
 
 ## 🛠️ Como rodar o projeto localmente

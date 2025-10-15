@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const calculateOrderAmount = (items) => {
     const total = items.reduce((acc, curent) => {
-        return current.price * current.quantity + acc;
+        return curent.price * curent.quantity + acc;
     }, 0);
     return total * 100;
 }
@@ -45,6 +45,7 @@ class CreatePaymentIntentController {
 
         response.json({
             clientSecret: paymentIntent.client_secret,
+            dpmCheckerLink: `https://dashboard.stripe.com/settings/payment_methods/review?payment_intent=${paymentIntent.id}`,
         });
     }
 }
