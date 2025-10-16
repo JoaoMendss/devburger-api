@@ -8,7 +8,7 @@ const calculateOrderAmount = (items) => {
     const total = items.reduce((acc, curent) => {
         return curent.price * curent.quantity + acc;
     }, 0);
-    return total * 100;
+    return total;
 }
 
 class CreatePaymentIntentController {
