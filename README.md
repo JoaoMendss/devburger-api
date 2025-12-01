@@ -38,6 +38,7 @@ O **DevBurger API** é o backend de uma hamburgueria virtual, desenvolvido para 
 
 ## 📂 Estrutura de Pastas
 
+```bash
 DEVBURGER-API
 ├── node_modules
 ├── src
@@ -74,8 +75,10 @@ DEVBURGER-API
 ├── package.json
 ├── README.md
 └── yarn.lock
-````
+```
+
 </details>
+
 
 ## 🛠️ Como rodar o projeto localmente
 
